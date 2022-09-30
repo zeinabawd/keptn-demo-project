@@ -22,6 +22,8 @@ spec:
               properties:
                 deploymentstrategy: "user_managed"
             - name: "test"
+              properties:
+                teststrategy: "user_managed"
             - name: "evaluation"
               properties:
                 timeframe: "2m"
