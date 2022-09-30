@@ -9,6 +9,8 @@ spec:
       - name: "delivery"
         tasks: 
         - name: "deployment"
+          properties:
+            deploymentstrategy: "user_managed"
 
     - name: "qa"
       sequences:
@@ -17,6 +19,8 @@ spec:
             - event: "dev.delivery.finished"
           tasks:
             - name: "deployment"
+              properties:
+                deploymentstrategy: "user_managed"
             - name: "test"
             - name: "evaluation"
               properties:
@@ -31,8 +35,10 @@ spec:
             - name: "approval"
               properties:
                 pass: "automatic"
-                warning: "automatic"
+                warning: "manual"
             - name: "deployment"
+              properties:
+                deploymentstrategy: "user_managed"
             - name: "test"
             - name: "evaluation"
               properties:
