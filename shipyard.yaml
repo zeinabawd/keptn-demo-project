@@ -23,7 +23,7 @@ spec:
                 deploymentstrategy: "user_managed"
             - name: "test"
               properties:
-                teststrategy: "user_managed"
+                teststrategy: "performance"
             - name: "evaluation"
               properties:
                 timeframe: "2m"
